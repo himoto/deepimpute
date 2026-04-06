@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 VERSION = "1.2"
 
@@ -12,18 +12,10 @@ setup(
     author="Cedric Aridakessian",
     author_email="carisdak@hawaii.edu",
     url="",
-    entry_points={'console_scripts': ['deepImpute=deepimpute.deepImpute:deepImpute']},
+    entry_points={"console_scripts": ["deepImpute=deepimpute.deepImpute:deepImpute"]},
     license="MIT",
     packages=find_packages(exclude=["examples", "tests"]),
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        "numpy",
-        "pandas>=1.0",
-        "scipy",
-        "sklearn",
-        "tensorflow>=2.0",
-        "configparser",
-        "keras"
-    ],
+    install_requires=["numpy", "pandas>=1.0", "scipy", "scikit-learn", "tensorflow>=2.0", "configparser", "keras"],
 )
